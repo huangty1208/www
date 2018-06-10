@@ -15,8 +15,8 @@ body{
   width:100vw;
 }
 .inner-container{
-  width:400px;
-  height:200px;
+  width:500px;
+  height:300px;
   position:absolute;
   top:calc(50vh - 200px);
   left:calc(50vw - 200px);
