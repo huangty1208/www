@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns = "http://www.w3.org/1999/xhtml"
+      lang = "en" xml:lang = "en">
+
+  <head>
+    <meta charset = "utf-8" />
+    <title> Circadian  Site </title>
+    <link rel = "stylesheet" type = "text/css"
+	 href = "project5.css" media = "all" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script type = "text/javascript"> 
+
+function callServer() { 
+var v2 = document.getElementById("te").value;
+if (v2.trim()== "" ){
+  alert("Gene names can not be empty!");
+}
+
+} 
+
+
+
+</script>
+
+
+  </head>
+
+  <body>
+  
+    <div class="contact" >
+	  <br/>
+	
+		 <div id = "cap" >
+	     <h3>Contact me</h3>
+	     </div>
+	
+	  <p>
+      <i>Copyright&#64;2015 UT Austin </i><br>
+      </p>
+	  <a href = "mailto:huangty@utexas.edu"> huangty@utexas.edu </a>
+	</div>
+
+    <div class="image">
+     <a href="project.html"><img id = "logo2" src = "logo2.png" 
+     alt = "site logo" /></a>
+	 <div id = "cap" >
+	     <h3>Mouse over me to navigate!</h3>
+	 </div>
+	 
+	  <div id = "side" >
+	    <h3>Our Content</h3>
+        <p>
+            <a class="ex1" href="interior1.html">What we know about the clock?</a>
+            <br/>
+            <a class="ex1" href="interior2.html">How circadian works?</a>
+            <br/>
+            <a class="ex1" href="interior3.html">What's the up-to-date stuff?</a>
+            <br/>   
+            <a class="ex1" href="testy.php">Test Yourself!</a>
+            <br/>    
+            <a class="ex1" href="interior4.php">Diurnal Tools</a>
+           		
+        </p>
+        <h3>Sources</h3>
+        <p>
+            <a href="http://www.ncbi.nlm.nih.gov/pubmed">Pubmed</a>
+             <br/>
+            <a href="http://diurnal.mocklerlab.org/">Diurnal</a>
+            <br/>
+            <a href="http://www.jcircadianrhythms.com/">Journal of Circadian Rhythms</a>
+            <br/>  
+            <a href="http://sites.dartmouth.edu/mcclunglab/">McClung Lab</a>	
+		</p>
+      </div>
+    </div>
+  
+  <div class = "page">
+    
+    <header>  
+       <h1>Diurnal Tools </h1>
+
+    </header>
+	
+	    <div class = "intro">
+        <h3>Exploring the diurnal genome-wide expression of chromatin markers</h3>
+		</div>
+
+
+	    <div id="container" >
+    <script> 
+	
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Mean selected histone marker levels at different ZT',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: Circadian site',
+            x: -20
+        },
+        xAxis: {
+		    title: {
+                text: 'Time of the day'
+            },
+            categories: ['ZT0', 'ZT3', 'ZT6', 'ZT9', 'ZT12', 'ZT15',
+                'ZT18', 'ZT021', 'ZT24']
+        },
+        yAxis: {
+            title: {
+                text: 'Mean reads level per bp'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'rpb'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'at2g46830',
+            data: [0.756783,0.927236,0.713569,0.228762,0.130707,0.0918344,0.177686,0.215473,0.616534]
+        }, {
+            name: 'at1g01060',
+            data: [1.07845,1.39921,0.465474,0.136697,0.0708458,0.159453,0.164063,0.607818,1.08619]
+        }, {
+            name: 'at5g61380',
+            data: [0.28773,0.395939,0.507024,0.570821,0.990886,0.899735,0.468515,0.599454,0.308037]
+        }, {
+            name: 'at2g25930',
+            data: [0.277561,0.551735,0.396723,0.739648,0.868273,0.898455,0.779693,1.09313,0.718325]
+        }]
+    });
+});
+	
+	
+	</script>
+
+
+    </div>
+
+
+	
+    <div class = "intro"> 
+ 
+
+    <div class = "intro3">
+    
+	<br/>
+
+	<form  id="usrform" action="reply.php" method="post" >
+
+	 <div id = "ra" >
+	 <input type="radio" name="type" value="h3k4" checked="checked" /> H3K4me3
+     <input type="radio" name="type" value="h3k9" /> H3K9ac <br />
+	 </div>
+	 <br/>
+    
+    <textarea id = "te" rows="10" cols="30" name="genename" form="usrform" required>
+At2g46830
+At1g01060
+At5g61380
+At2g25930
+	</textarea>
+    <br/>
+	<input type="submit" value="Submit">
+    </form>
+	
+	<br/>
+	<p>
+	The current version supports two active histone markers <br/>
+    More histone markers will be included once the expression data is publicized	
+	</p>
+ 
+    </div>
+	
+	<div class = "intro4">
+	
+	<p>
+	The diurnal tool provides a convenient access to circadian and diurnal expression data of multiple histone markers for model plant Arabidopsis thaliana. The acutal statistical results will be publicized and open for download after the current papers are published. <br/><br/>
+    Gnome-wide analysis identifying ATX1 at the core of the Arabidopsis circadian clock Huang TY, Yu HH, Lu J, McClung CR, Chen ZJ. Plant Cell 2015 Dec. (in press) <br/><br/>
+	Circadian site, a web-based epigenomics platform for histone-modifying expression profiling Huang TY, McClung CR, Chen ZJ (in preparation)<br/>
+	
+	
+	</p>
+	
+	</div>
+
+    </div>	
+
+
+   <br/>
+   <br/>
+  </div>
+
+  </body>
+
+</html>
