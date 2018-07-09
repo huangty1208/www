@@ -319,7 +319,7 @@ h5 {
 }
 
 p {
-    padding-bottom: 25px;
+    padding-bottom: 36px;
     margin: 0;
 }
 
@@ -368,6 +368,8 @@ p {
     overflow: hidden;
 }
 
+
+
 .row-1,
 .row-2 {
     background: #fff;
@@ -405,6 +407,7 @@ p {
     font-size: 20px;
     line-height: 150%;
     font-family: 'Indie Flower', cursive;
+	
 }
 
 .block-slogan2 {
@@ -420,22 +423,29 @@ p {
 .block-slogan2 h2 {
 	font-size: 300%;
 	color: #62C4B6;
-    float: left;
-    margin: 30px 0 30px 0;
-    padding: 0px 5% 0px 2.5%;
+    padding: 26px 26px 26px 3%;
     line-height: 54px;
-	    border-right: 1px solid black;
+	    
 }
+
+
 
 .block-slogan2 p {
 		color: black;
-    margin: 20px 0 0 0;
-    padding: 0 0 0 26px;
-	    font-size: 20px;
+    
+    padding: 0 0 0 20%;
+    font-size: 20px;
     line-height: 150%;
     font-family: 'Indie Flower', cursive;
 
 }
+
+
+.block-slogan2 div {
+    overflow: hidden;
+}
+
+
 
 .block-slogan2 h5 {
 
@@ -448,10 +458,6 @@ p {
 }
 
 
-
-.block-slogan2 div {
-    overflow: hidden;
-}
 
 
 #h5{
